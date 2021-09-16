@@ -1,0 +1,29 @@
+{
+    "collections": [
+        {
+            "id": 1,
+            "stock": "CPALL",
+            "market": "SET"
+        },
+        {
+            "id": 2,
+            "stock": "BDMS",
+            "market": "SET"
+        },
+        {
+            "id": 3,
+            "stock": "AU",
+            "market": "MAI"
+        },
+        {
+            "id": 4,
+            "stock": "AAPL",
+            "market": "NASDAQ"
+        },
+        {
+            "id": 5,
+            "stock": "TNP",
+            "market": "SET"
+        }
+    ]
+}

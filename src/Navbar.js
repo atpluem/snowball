@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 function Navbar() {
   const menuBtn = document.querySelector('.menu-btn');
   const menu = document.querySelector('.mobile-menu');
   let menuOpen = false;
+
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
   if (menuBtn) {
     menuBtn.addEventListener('click', () => {
@@ -30,15 +32,15 @@ function Navbar() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
                 </svg>
-                <span>SNOWBALL</span>
+                <span className="text-brown-grey font-bold">SNOWBALL</span>
               </a>
             </div>
 
             <div className="hidden md:flex space-x-4 items-center">
-              <a href="#" className="hidden md:block py-2 px-3 text-gray-700">Home</a>
-              <a href="#" className="hidden md:block py-2 px-3 text-gray-700">Gadget</a>
-              <a href="#" className="hidden md:block py-2 px-3 text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <a href="#" className="hidden md:block py-2 px-3 text-brown-grey">Home</a>
+              <a href="#" className="hidden md:block py-2 px-3 text-brown-grey">Gadget</a>
+              <a href="#" className="hidden md:block py-2 px-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brown-grey" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </a>
@@ -55,8 +57,7 @@ function Navbar() {
         </div>
 
         {/* Mobile menus */}
-
-        <div className="mobile-menu hidden md:hidden">
+        <div className="mobile-menu md:hidden">
           <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-900">Home</a>
           <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-900">Gadget</a>
         </div>
